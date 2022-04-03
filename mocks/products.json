@@ -1,0 +1,172 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "title": "Celular Motorola E7 32 GB Gris",
+      "brand": "Motorola",
+      "sku": "7RRTTN2WRXANRSIG",
+      "price": 21999,
+      "discount": 0
+    },
+    {
+      "id": 2,
+      "title": "Celular Motorola G20 SE 128GB Azul",
+      "brand": "Motorola",
+      "sku": "6EWKNP0EMEWND687",
+      "price": 33999,
+      "discount": 0
+    },
+    {
+      "id": 3,
+      "title": "Celular Motorola E7i 32GB Naranja",
+      "brand": "Motorola",
+      "sku": "APZCT6D2JCPX0A8V",
+      "price": 19999,
+      "discount": 0
+    },
+    {
+      "id": 4,
+      "title": "Celular LG K51s 64 GB Titanium",
+      "brand": "LG",
+      "sku": "CNP9WW07E2ACQ15C",
+      "price": 25999,
+      "discount": 18
+    },
+    {
+      "id": 5,
+      "title": "Celular Motorola G60S 128GB Aqua",
+      "brand": "Motorola",
+      "sku": "7XQSKXS9DVNN9UY9",
+      "price": 49999,
+      "discount": 0
+    },
+    {
+      "id": 6,
+      "title": "Celular Motorola E7 32GB Aqua",
+      "brand": "Motorola",
+      "sku": "2QMRCZUPA7GQWO90",
+      "price": 21999,
+      "discount": 0
+    },
+    {
+      "id": 7,
+      "title": "Celular Samsung Galaxy A12 64 GB Negro",
+      "brand": "Samsung",
+      "sku": "JQ585S9CHIIW9IYF",
+      "price": 31999,
+      "discount": 0
+    },
+    {
+      "id": 8,
+      "title": "Celular Motorola E7 32GB Coral",
+      "brand": "Motorola",
+      "sku": "5BFAY679NH9TTWRJ",
+      "price": 21999,
+      "discount": 0
+    },
+    {
+      "id": 9,
+      "title": "Celular Samsung Galaxy A72 128 GB Negro",
+      "brand": "Samsung",
+      "sku": "2MB4SEKNGS3R4533",
+      "price": 74999,
+      "discount": 0
+    },
+    {
+      "id": 10,
+      "title": "Celular Samsung Galaxy A52 128GB Negro",
+      "brand": "Samsung",
+      "sku": "JTLO9LQ80NWEO93W",
+      "price": 60999,
+      "discount": 0
+    },
+    {
+      "id": 11,
+      "title": "Celular Samsung Galaxy A21s 128 GB Azul",
+      "brand": "Samsung",
+      "sku": "RYQKQ2BKAFJTYQCG",
+      "price": 40999,
+      "discount": 0
+    },
+    {
+      "id": 12,
+      "title": "Celular Samsung A01 Core 16 GB Negro",
+      "brand": "Samsung",
+      "sku": "0GQZRA0YPPYROR9P",
+      "price": 15999,
+      "discount": 0
+    },
+    {
+      "id": 13,
+      "title": "Celular Samsung Galaxy S21 128 GB Blanco",
+      "brand": "Samsung",
+      "sku": "VKLKEHU9P4QUT700",
+      "price": 136999,
+      "discount": 0
+    },
+    {
+      "id": 14,
+      "title": "Celular TCL 20SE 128 GB Gris",
+      "brand": "TCL",
+      "sku": "NREJYUWGBGI4GIMB",
+      "price": 33999,
+      "discount": 10
+    },
+    {
+      "id": 15,
+      "title": "Celular Samsung Galaxy A03S 64GB Azul",
+      "brand": "Samsung",
+      "sku": "ZI4GRO2XVDK370YH",
+      "price": 28999,
+      "discount": 0
+    },
+    {
+      "id": 16,
+      "title": "Celular Motorola G100 128 GB Azul",
+      "brand": "Motorola",
+      "sku": "1QG92REXUE4KGJY6",
+      "price": 89999,
+      "discount": 0
+    },
+    {
+      "id": 17,
+      "title": "Celular Motorola Edge 20 Lite 128 GB Gris ",
+      "brand": "Motorola",
+      "sku": "7FPGOEHRE0RVJ3HK",
+      "price": 69999,
+      "discount": 0
+    },
+    {
+      "id": 18,
+      "title": "Celular TCL 10 SE 128GB Polar Night ",
+      "brand": "TCL",
+      "sku": "1NQTNH1PJKYCFDZF",
+      "price": 27999,
+      "discount": 12
+    },
+    {
+      "id": 19,
+      "title": "Celular Samsung Galaxy A02 32 GB Azul ",
+      "brand": "Samsung",
+      "sku": "9R49S3DHCYK8QVI7",
+      "price": 21499,
+      "discount": 0
+    },
+    {
+      "id": 20,
+      "title": "Celular Samsung Galaxy A02 32 GB Negro ",
+      "brand": "Samsung",
+      "sku": "7G9B8F3FRJPZZ5CE",
+      "price": 21499,
+      "discount": 0
+    },
+    {
+      "id": 21,
+      "title": "Celular Samsung A01 Core 16GB Azul",
+      "brand": "Samsung",
+      "sku": "MDRL1V4CBAHB7LBK",
+      "price": 15999,
+      "discount": 0
+    }
+  ]
+}
