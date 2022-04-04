@@ -1,21 +1,19 @@
 import { Container, ImgContainer, InfoContainer, AddToCart } from "./styles";
 import prodimg from "../../../public/image-product.jpg";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addProduct } from "../../../reducers/product";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function ProductCard(product) {
-  const [productAdded, setProductAdded] = useState(false);
   const dispatch = useDispatch();
   const navigateTo = useNavigate();
 
+  const idAdded = useSelector((state) =>
+    state.cart.some((productCart) => productCart.product.id === product.id)
+  );
+
   const addProductToCart = () => {
-    if (productAdded) {
-      return navigateTo("/cart");
-    }
-    dispatch(addProduct(product));
-    setProductAdded(true);
+    idAdded ? navigateTo("/cart") : dispatch(addProduct(product));
   };
 
   return (
@@ -29,7 +27,7 @@ export default function ProductCard(product) {
           <span>${product.price}</span>
         </InfoContainer>
         <AddToCart onClick={addProductToCart}>
-          {productAdded ? "Ver Carrito" : "Agregar al carrito"}
+          {idAdded ? "Ver Carrito" : "Agregar al carrito"}
         </AddToCart>
       </Container>
     </>
