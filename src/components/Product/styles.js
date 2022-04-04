@@ -10,6 +10,7 @@ export const Container = styled.div`
   padding: 1rem 2rem;
   color: #000;
   margin: 0 auto;
+  border-radius: 8px;
 `;
 
 export const ImgContainer = styled.div`
@@ -35,4 +36,5 @@ export const AddToCart = styled.button`
   color: #fff;
   margin-top: 1rem;
   cursor: pointer;
+  border-radius: 8px;
 `;

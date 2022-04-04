@@ -29,4 +29,5 @@ export const RightContainer = styled.div`
 export const CustomLink = styled(Link)`
   color: #fff;
   text-decoration: none;
+  font-weight: 700;
 `;

@@ -9,7 +9,10 @@ function SearchProduct({ onChangeQuery }) {
   return (
     <>
       <Container>
-        <input onChange={handleChange}></input>
+        <input
+          placeholder="Buscar producto por nombre"
+          onChange={handleChange}
+        ></input>
       </Container>
     </>
   );

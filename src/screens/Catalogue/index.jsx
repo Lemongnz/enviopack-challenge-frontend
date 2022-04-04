@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { Container } from "./styles";
 import productsService from "../../../services/products.service";
-import ReactPaginate from "react-paginate";
 import CustomDropDown from "../../components/CustomDropDown";
 import ProductsList from "../../components/ProductList";
 import SearchProduct from "../../components/SearchProduct";
+import PaginateContainer from "../../components/ReactPaginate";
 
 export default function CatalogueScreen() {
   const [products, setProducts] = useState([]);
@@ -16,20 +16,16 @@ export default function CatalogueScreen() {
 
   const PRODUCTS_PER_PAGE = 6;
 
-  const handlePageClick = (event) => {
-    const newOffset = (event.selected * PRODUCTS_PER_PAGE) % products.length;
-    setItemOffset(newOffset);
-  };
-
   const sliceProducts = (productsToSlice) => {
     setCurrentProducts(productsToSlice.slice(0, PRODUCTS_PER_PAGE));
   };
 
   useEffect(() => {
     const endOffset = itemOffset + PRODUCTS_PER_PAGE;
-    setCurrentProducts(products.slice(itemOffset, endOffset));
+
     setPageCount(Math.ceil(products.length / PRODUCTS_PER_PAGE));
-  }, [itemOffset, PRODUCTS_PER_PAGE]);
+    setCurrentProducts(products.slice(itemOffset, endOffset));
+  }, [itemOffset, PRODUCTS_PER_PAGE, products]);
 
   useEffect(async () => {
     const { productos } = await productsService.getAll();
@@ -74,17 +70,19 @@ export default function CatalogueScreen() {
         </div>
       </div>
       <div>
-        <ProductsList products={currentProducts} />
-        <ReactPaginate
-          breakLabel="..."
-          nextLabel="next >"
-          onPageChange={handlePageClick}
-          pageRangeDisplayed={5}
-          pageCount={pageCount}
-          previousLabel="< previous"
-          renderOnZeroPageCount={null}
-          className="pagination"
-        />
+        {currentProducts !== null ? (
+          <>
+            <ProductsList products={currentProducts} />
+            <PaginateContainer
+              pageCount={pageCount}
+              productsPerPage={PRODUCTS_PER_PAGE}
+              products={products}
+              setItemOffset={setItemOffset}
+            />
+          </>
+        ) : (
+          <p>Cargando...</p>
+        )}
       </div>
     </Container>
   );

@@ -25,6 +25,11 @@ export const ProductInfo = styled.div`
   padding: 0 15px;
   font-size: 18px;
 
+  & button {
+    background-color: #c1c1c1;
+    border: none;
+    cursor: pointer;
+  }
   .price {
     & p {
       margin: 0;

@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+
 import { emptyCart } from "../../../reducers/product";
 import { updateCredit } from "../../../reducers/profile";
-import { Container, Success } from "./styles";
+import { Container, Success, CustomLink } from "./styles";
 
 function PurchaseScreen() {
   const productsCart = useSelector((state) => state.cart);
@@ -31,19 +31,19 @@ function PurchaseScreen() {
       {isSuccess ? (
         <Success>
           <p>La compra se realizó con exito</p>
-          <Link to="/">
-            <button>Volver al catálogo</button>
-          </Link>
+          <CustomLink to="/">
+            <p>Volver al catálogo</p>
+          </CustomLink>
         </Success>
       ) : (
         <Success>
           <p>
-            Ocurrió un error con al compra, revisá que el importe no supere el
+            Ocurrió un error con la compra, revisá que el importe no supere el
             crédito disponible en tu cuenta
           </p>
-          <Link to="/">
-            <button>Volver al catálogo</button>
-          </Link>
+          <CustomLink to="/cart">
+            <p>Volver al carrito</p>
+          </CustomLink>
         </Success>
       )}
     </Container>

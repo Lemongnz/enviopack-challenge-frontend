@@ -19,6 +19,7 @@ export const TotalCartPrice = styled.div`
   min-height: 50px;
   margin: 20px auto;
   box-shadow: 3px 3px 15px 1px #e6e6e6;
+  border-radius: 8px;
 
   & span {
     margin-left: 20px;
