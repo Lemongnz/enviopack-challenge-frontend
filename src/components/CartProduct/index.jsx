@@ -2,6 +2,7 @@ import { Container, ProductInfo } from "./styles";
 import { FaWindowClose } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { deleteProduct } from "../../../reducers/product";
+import prodimg from "../../../public/image-product.jpg";
 
 function CartProduct({ productCart }) {
   const dispatch = useDispatch();
@@ -13,7 +14,7 @@ function CartProduct({ productCart }) {
   return (
     <Container>
       <div className="img">
-        <img src="../../public/image-product.jpg" />
+        <img src={prodimg} />
       </div>
       <ProductInfo>
         <p>{productCart.product.title}</p>
