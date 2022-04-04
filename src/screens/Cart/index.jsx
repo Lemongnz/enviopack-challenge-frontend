@@ -4,7 +4,7 @@ import { Container } from "./styles";
 function CartScreen() {
   return (
     <Container>
-      <h1>Cart</h1>
+      <h1>Carrito</h1>
       <Cart />
     </Container>
   );

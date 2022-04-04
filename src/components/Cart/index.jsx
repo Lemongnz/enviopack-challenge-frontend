@@ -7,27 +7,42 @@ function Cart() {
 
   return (
     <Container>
-      {productsCart.map((product) => (
-        <CartProduct key={product.id} productCart={product} />
-      ))}
-      <TotalCartPrice>
-        <span>TOTAL</span>
-        <strong>
-          $
-          {productsCart.reduce(
-            (total, { product }) => total + product.price,
-            0
-          )}
-        </strong>
-      </TotalCartPrice>
-      <ButtonsCart>
-        <button>
-          <ButtonLink to="/">Volver al catálogo</ButtonLink>
-        </button>
-        <button>
-          <ButtonLink to="/purchase">Finalizar compra</ButtonLink>
-        </button>
-      </ButtonsCart>
+      {productsCart.length > 0 ? (
+        <>
+          {productsCart.map((product) => (
+            <CartProduct key={product.id} productCart={product} />
+          ))}
+          <TotalCartPrice>
+            <span>TOTAL</span>
+            <strong>
+              $
+              {productsCart.reduce(
+                (total, { product }) => total + product.price,
+                0
+              )}
+            </strong>
+          </TotalCartPrice>
+          <ButtonsCart>
+            <button>
+              <ButtonLink to="/">Volver al catálogo</ButtonLink>
+            </button>
+            <button>
+              <ButtonLink to="/purchase">Finalizar compra</ButtonLink>
+            </button>
+          </ButtonsCart>
+        </>
+      ) : (
+        <>
+          <div className="emptyCart">
+            <h2>No hay productos en el carrito</h2>
+          </div>
+          <ButtonsCart>
+            <button>
+              <ButtonLink to="/">Volver al catálogo</ButtonLink>
+            </button>
+          </ButtonsCart>
+        </>
+      )}
     </Container>
   );
 }

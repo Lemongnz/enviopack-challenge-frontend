@@ -46,14 +46,12 @@ export default function CatalogueScreen() {
       );
     }
 
-    if (sortBy == "price") {
-      // ordenar por precio
+    if (sortBy == "less") {
+      // ordenar de menor a mayor
       filteredProducts = filteredProducts.sort((a, b) => a.price - b.price);
-    } else if (sortBy == "title") {
-      // ordenar por nombre
-      filteredProducts = filteredProducts.sort((a, b) =>
-        a.title.localeCompare(b.title)
-      );
+    } else if (sortBy == "more") {
+      // ordenar de mayor a menor
+      filteredProducts = filteredProducts.sort((a, b) => b.price - a.price);
     }
 
     sliceProducts([...filteredProducts]);

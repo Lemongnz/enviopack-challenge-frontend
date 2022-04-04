@@ -13,8 +13,8 @@ function CustomDropDown({ onChangeSort }) {
           <option value="default" hidden>
             Seleccionar
           </option>
-          <option value="title">Nombre</option>
-          <option value="price">Precio</option>
+          <option value="less">más baratos</option>
+          <option value="more">más caros</option>
         </select>
       </Container>
     </>
